@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:notification_listener/src/profile/profile_page.dart';
 import 'package:notification_listener/src/utils/nav2.dart';
@@ -16,12 +18,18 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Home Page"),
       ),
+      body: Center(
+        child: Text(
+          "GabulDEV",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.add,
         ),
         onPressed: () {
-          NavNavigator.push(context, page: ProfilePage());
+          Navigator2.push(context, page: ProfilePage());
         },
       ),
     );

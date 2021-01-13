@@ -15,7 +15,7 @@ class Nav2NotificationPop extends Nav2Notification {
   Nav2NotificationPop();
 }
 
-class NavNavigator {
+class Navigator2 {
   static void push(BuildContext context, {@required Widget page}) {
     Nav2NotificationPush(page: page).dispatch(context);
   }
