@@ -46,6 +46,8 @@ class _Nav2State extends State<Nav2Widget> {
   }
 
   void add(Widget page) {
+    Navigator2.pop(context);
+
     pages.add(page);
     setState(() {});
   }
@@ -100,7 +102,19 @@ class _Nav2State extends State<Nav2Widget> {
               return true;
             }
           },
-          pages: pages.map((e) => MaterialPage(child: e)).toList(),
+          pages: [
+            if (true)
+              MaterialPage(
+                child: Container(
+                  color: Colors.red,
+                ),
+              ),
+            MaterialPage(
+              child: Container(
+                color: Colors.green,
+              ),
+            )
+          ],
         ),
       ),
     );
